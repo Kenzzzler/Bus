@@ -52,14 +52,12 @@ class MainActivity : AppCompatActivity() {
                 resetApp.visibility = View.INVISIBLE
                 pass.text = "Осталось мест ${10 - numPass}"
                 minusPass.isEnabled = true
-                plusPass.isEnabled = true
                 pass.textSize = 30F
             }
             numPass == 10 -> {
                 pass.setTextColor(Color.RED)
                 resetApp.visibility = View.VISIBLE
                 pass.text = "Пассажиров слишком много"
-                plusPass.isEnabled = false
                 pass.textSize = 20F
             }
             numPass == 0 -> {
@@ -67,7 +65,6 @@ class MainActivity : AppCompatActivity() {
                 resetApp.visibility = View.INVISIBLE
                 pass.text = "Все места свободны"
                 minusPass.isEnabled = false
-                plusPass.isEnabled = true
                 pass.textSize = 30F
             }
         }
