@@ -46,21 +46,21 @@ class MainActivity : AppCompatActivity() {
 
     }
     private fun pass() {
-        when {
-            numPass < 10 && numPass != 0 -> {
+        when(numPass){
+            in 1..9 -> {
                 pass.setTextColor(Color.BLUE)
                 resetApp.visibility = View.INVISIBLE
                 pass.text = "Осталось мест ${10 - numPass}"
                 minusPass.isEnabled = true
                 pass.textSize = 30F
             }
-            numPass == 10 -> {
+           10 -> {
                 pass.setTextColor(Color.RED)
                 resetApp.visibility = View.VISIBLE
                 pass.text = "Пассажиров слишком много"
                 pass.textSize = 20F
             }
-            numPass == 0 -> {
+           0 -> {
                 pass.setTextColor(Color.GREEN)
                 resetApp.visibility = View.INVISIBLE
                 pass.text = "Все места свободны"
